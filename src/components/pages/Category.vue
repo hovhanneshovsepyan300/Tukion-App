@@ -157,11 +157,7 @@
                 viewVideos: 'GET_VIDEOS',
                 patchVideo: 'EDIT_VIDEO',
                 resetState: 'RESET_STATE',
-                downloadVideo: 'DOWNLOAD_VIDEO',
             }),
-            playing() {
-                console.log('we are watching!!!')
-            },
             getId (url) {
                 return this.$youtube.getIdFromUrl(url)
             },
@@ -183,7 +179,6 @@
                 const id = this.getId(this.url);
                 
                 if(!id) {
-                    console.log("Entered url id not correct youtube video url.");
                     return
                 }
 

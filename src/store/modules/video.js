@@ -1,4 +1,4 @@
-import { getVideos, addVideo, editVideo, downloadVideo } from '../../api'
+import { getVideos, addVideo, editVideo } from '../../api'
 
 const initialState = {
     videos: [],
@@ -25,9 +25,6 @@ const mutations = {
             }
             return item;
         })
-    },
-    DOWNLOAD: () => {
-        console.log("aaaa");
     },
     RESET_STATE: (state) => {
         state.videos = [];
@@ -56,16 +53,14 @@ const actions = {
             commit('EDIT_VIDEO_MUTATION', {data});
         }
     },
-    DOWNLOAD_VIDEO: async ({commit}, id) => {
-        console.log('id',id)
-        let data = await downloadVideo({id});
+    // DOWNLOAD_VIDEO: async ({commit}, id) => {
+    //     let data = await downloadVideo({id});
 
-        if(data) {
-            commit('DOWNLOAD');
-            console.log("download reeeeessss", data)
-            return data;
-        }
-    },
+    //     if(data) {
+    //         commit('DOWNLOAD');
+    //         return data;
+    //     }
+    // },
     RESET_STATE: async({commit}) => {
         commit('RESET_STATE')
     }

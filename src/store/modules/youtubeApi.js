@@ -37,8 +37,6 @@ const actions = {
                 method: "GET"
             })
 
-            console.log("dtaaaa", data)
-
         if(data) {
             commit('SET_VIDEO_MUTATION', { data: data.data.items[0] })
         }
