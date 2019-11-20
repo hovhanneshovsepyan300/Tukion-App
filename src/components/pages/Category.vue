@@ -212,7 +212,7 @@
             },
             download: async function(item) {
                 // await this.downloadVideo(this.getId(item.url));
-                window.open(`http://localhost:5000/api/video/download/${this.getId(item.url)}`);
+                window.open(`https://tukion-api.herokuapp.com/api/video/download/${this.getId(item.url)}`);
             }
         },
     }

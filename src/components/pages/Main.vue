@@ -65,10 +65,6 @@
                         </v-list-item-group>
                     </v-list>
                  </v-card>
-                 <!-- <a href="http://localhost:5000/api/video/download_file" download="w3logo">
-                    <img src="http://localhost:5000/api/video/download_file" alt="W3Schools" width="104" height="142">
-                </a> -->
-
             </section>
         </v-content>
     </v-app>
